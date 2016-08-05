@@ -20,7 +20,7 @@ Parse.Cloud.define("sendEmail", function(request, response) {
 			headers: {'Content-Type': 'application/json'},
 			url: 'https://mandrillapp.com/api/1.0/messages/send-template.json',
 			body:{
-				"key": "1ZAWsxiShOAoYC3BpLK2ZQ",
+				"key": request.params.key,
 				"template_name": "MagicSheet",
 				"template_content": [],
 				"message": {
