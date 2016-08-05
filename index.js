@@ -27,7 +27,8 @@ var api = new ParseServer({
   filesAdapter: new S3Adapter(
     bucketId,
     bucketSecret,
-    {bucket: bucketName, bucketPrefix: "", directAccess: true}
+    bucketName,
+    {directAccess: true}
 	)
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
