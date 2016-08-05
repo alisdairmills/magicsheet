@@ -5,9 +5,9 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var S3Adapter = require('parse-server').S3Adapter;
 var path = require('path');
-var bucketId = "AKIAJRLIQHN7QPOG334Q";
-var bucketSecret = "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";
-var bucketName = "magicsheet";
+var bucketId = process.env.BUCKET_ID || '';
+var bucketSecret = process.env.BUCKET_SECRET || '';
+var bucketName = process.env.BUCKET_NAME || '';
 
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
